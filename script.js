@@ -1,5 +1,5 @@
 //your JS code here. If required.
-let output = document.getElementById("output");
+const output = document.getElementById("output");
 
 new Promise((resolve) => {
 	setTimeout(() => {
@@ -7,7 +7,7 @@ new Promise((resolve) => {
 	}, 3000)
 })
 .then((arr) => {
-	let evenNumbers = arr.filter((item) => item%2 === 0);
+	const evenNumbers = arr.filter((num) => num%2 === 0);
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			output.textContent = evenNumbers.join(",");
@@ -16,7 +16,7 @@ new Promise((resolve) => {
 	});
 })
 .then((evenNumbers) => {
-	let doubledNumbers = evenNumbers.map((item) => item*2);
+	const doubledNumbers = evenNumbers.map((num) => num*2);
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			output.textContent = doubledNumbers.join(",");
